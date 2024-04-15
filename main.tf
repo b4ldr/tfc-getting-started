@@ -25,7 +25,7 @@ resource "fakewebservices_vpc" "primary_vpc" {
 resource "fakewebservices_server" "servers" {
   count = 2
 
-  name = "WebServer ${count.index + 1}"
+  name = "MicroWebServer ${count.index + 1}"
   type = "t2.micro"
   vpc  = fakewebservices_vpc.primary_vpc.name
 }
